@@ -1,10 +1,6 @@
-const dotenv = require('dotenv')
 const { Composer } = require('micro-bot')
 
-dotenv.config({ path : "./config/config.env"})
-
 const bot = new Composer()
-
 
 // We can get bot nickname from bot informations. This is particularly useful for groups.
 bot.telegram.getMe().then((bot_informations) => {
