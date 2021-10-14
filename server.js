@@ -1,9 +1,9 @@
 const dotenv = require('dotenv')
-const { Telegraf } = require('telegraf')
+const { Composer } = require('micro-bot')
 
 dotenv.config({ path : "./config/config.env"})
 
-const bot = new Telegraf(process.env.BOT_API);
+const bot = new Composer()
 
 
 // We can get bot nickname from bot informations. This is particularly useful for groups.
@@ -124,4 +124,4 @@ bot.action('two', ctx => {
 
 
 // Start bot polling in order to not terminate Node.js application.
-bot.startPolling();
+module.exports = bot
