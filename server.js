@@ -2,13 +2,6 @@ const { Composer } = require('micro-bot')
 
 const bot = new Composer()
 
-// We can get bot nickname from bot informations. This is particularly useful for groups.
-bot.telegram.getMe().then((bot_informations) => {
-    bot.options.username = bot_informations.username;
-    console.log("Server has initialized bot nickname. Nick: "+bot_informations.username);
-});
-
-
 const requestLocationKeyboard = {
     "reply_markup": {
         "one_time_keyboard": true,
